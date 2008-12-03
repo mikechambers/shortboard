@@ -76,6 +76,9 @@
 	[topToolBar removeItemAtIndex:4];
 	[topToolBar removeItemAtIndex:0];
 	
+	[mainWindow setAutorecalculatesContentBorderThickness:YES forEdge:NSMinYEdge];
+	[mainWindow setContentBorderThickness: 32.0 forEdge: NSMinYEdge];
+	
 	[self loadBroadcastData];
 }
 
