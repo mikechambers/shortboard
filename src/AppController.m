@@ -278,16 +278,25 @@
 
 
 # define DEFAULT_CALENDAR_NAME @"ShortBoard"
--(IBAction)handleAddCalendar:(NSButton *)button
+-(IBAction)handleAddCalendar:(id)sender
 {
 	NSLog(@"handleAddCalendar");
+	
+	NSInteger row = [broadcastTable selectedRow];
+	
+	if(row == -1)
+	{
+		//we should never get here
+		NSAssert(FALSE, @"handleAddCalender called when no Broadcast was selected.");
+		return;
+	}
 	
 	CalCalendarStore *store = [CalCalendarStore defaultCalendarStore];
 	
 	//get all of the calendars
 	NSArray *calendars = [store calendars];
 	
-	CalCalendar *cal;
+	CalCalendar *cal = nil;
 
 	//check and see if the calendar already exists
 	for(CalCalendar *c in calendars)
@@ -315,9 +324,7 @@
 			return;
 		}	
 	}
-	
-	NSInteger row = [broadcastTable selectedRow];
-	
+		
 	Broadcast *b = [filteredBroadcasts objectAtIndex:row];
 	
 	CalEvent *event = [CalEvent event];
@@ -582,8 +589,10 @@
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification
 {
 	NSInteger selectedCount = [broadcastTable numberOfSelectedRows];
+	Boolean enabled = (selectedCount > 0);
 	
-	[calendarButton setEnabled:(selectedCount > 0)];
+	[calendarButton setEnabled:enabled];
+	[addToIcalMenuItem setEnabled:enabled];
 }
 
 

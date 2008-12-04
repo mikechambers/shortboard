@@ -25,6 +25,8 @@
 	
 	IBOutlet NSButton *calendarButton;
 	
+	IBOutlet NSMenuItem *addToIcalMenuItem;
+	
 	Boolean allSearch;
 	Boolean startSearch;
 	Boolean endSearch;
@@ -46,7 +48,7 @@
 -(Boolean)fileExistsAtPath:(NSString *)path;
 
 //calendar actions
--(IBAction)handleAddCalendar:(NSButton *)button;
+-(IBAction)handleAddCalendar:(id)sender;
 
 //search actions
 -(IBAction)handleSearchMenuItems:(NSMenuItem *)menuItem;
