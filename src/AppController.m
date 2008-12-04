@@ -356,6 +356,7 @@
 	//if it has, then add a day to the start date.
 	if([startDate compare:date] == NSOrderedAscending)
 	{
+		//1 day in seconds
 		NSTimeInterval oneDay = 86400;
 		
 		//is this a leak?
