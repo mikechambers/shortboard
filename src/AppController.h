@@ -23,6 +23,8 @@
 	
 	IBOutlet NSToolbar *topToolBar;
 	
+	IBOutlet NSButton *calendarButton;
+	
 	Boolean allSearch;
 	Boolean startSearch;
 	Boolean endSearch;
@@ -42,6 +44,9 @@
 -(void)importFromFilePath:(NSString *)filePath;
 
 -(Boolean)fileExistsAtPath:(NSString *)path;
+
+//calendar actions
+-(IBAction)handleAddCalendar:(NSButton *)button;
 
 //search actions
 -(IBAction)handleSearchMenuItems:(NSMenuItem *)menuItem;
