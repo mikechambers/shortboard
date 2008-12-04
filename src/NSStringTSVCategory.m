@@ -78,8 +78,6 @@
 		[b release];
 	}
 	
-	NSLog(@"here");
-	
 	//todo make sure autorelease is being used correctly here
 	[out autorelease];
 	return out;
