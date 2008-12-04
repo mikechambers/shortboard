@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		471306F40EE74E9F003707F7 /* CalendarStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471306F30EE74E9F003707F7 /* CalendarStore.framework */; };
+		4713074B0EE78B0A003707F7 /* HoursMinutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4713074A0EE78B0A003707F7 /* HoursMinutes.m */; };
 		471EAA460EDE706200A38C03 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EAA450EDE706200A38C03 /* AppController.m */; };
 		471EAA4D0EDE719F00A38C03 /* Broadcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EAA4C0EDE719F00A38C03 /* Broadcast.m */; };
 		471EAC3C0EDF2C8A00A38C03 /* NSStringTSVCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EAC3B0EDF2C8A00A38C03 /* NSStringTSVCategory.m */; };
@@ -30,6 +32,9 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* ShortBoard_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortBoard_Prefix.pch; sourceTree = "<group>"; };
+		471306F30EE74E9F003707F7 /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = System/Library/Frameworks/CalendarStore.framework; sourceTree = SDKROOT; };
+		471307490EE78B0A003707F7 /* HoursMinutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoursMinutes.h; sourceTree = "<group>"; };
+		4713074A0EE78B0A003707F7 /* HoursMinutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoursMinutes.m; sourceTree = "<group>"; };
 		471EAA440EDE706200A38C03 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		471EAA450EDE706200A38C03 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		471EAA4B0EDE719F00A38C03 /* Broadcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Broadcast.h; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				471306F40EE74E9F003707F7 /* CalendarStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +81,8 @@
 				471EAE470EE101B500A38C03 /* NSArrayFormatter.m */,
 				477B09210EE44EB900783B86 /* NSTextField+TimeCategory.h */,
 				477B09220EE44EB900783B86 /* NSTextField+TimeCategory.m */,
+				471307490EE78B0A003707F7 /* HoursMinutes.h */,
+				4713074A0EE78B0A003707F7 /* HoursMinutes.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -113,6 +121,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				471306F30EE74E9F003707F7 /* CalendarStore.framework */,
 			);
 			name = ShortBoard;
 			sourceTree = "<group>";
@@ -211,6 +220,7 @@
 				471EADFE0EE0AE2100A38C03 /* ArrayTransformer.m in Sources */,
 				471EAE480EE101B500A38C03 /* NSArrayFormatter.m in Sources */,
 				477B09230EE44EB900783B86 /* NSTextField+TimeCategory.m in Sources */,
+				4713074B0EE78B0A003707F7 /* HoursMinutes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
