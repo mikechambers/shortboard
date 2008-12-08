@@ -13,6 +13,7 @@
 #import "NSTextField+TimeCategory.h"
 #import <CalendarStore/CalendarStore.h>
 #import "HoursMinutes.h"
+#import "CalendarSheetController.h"
 
 
 #define ALL_MENU_TAG 20
@@ -39,6 +40,7 @@
 	}
 	
 	broadcasts = [[NSMutableArray alloc] init];
+	calendarSheet = [[CalendarSheetController alloc] init];
 	
 	allSearch = TRUE;
 	startSearch = FALSE;
@@ -56,6 +58,7 @@
 {
 	[broadcasts release];
 	[filteredBroadcasts release];
+	[calendarSheet release];
 	[super dealloc];
 }
 
@@ -291,6 +294,10 @@
 		return;
 	}
 	
+	
+	Broadcast *b = [filteredBroadcasts objectAtIndex:row];
+	[calendarSheet showSheet:mainWindow forBroadcast:b];
+	
 	CalCalendarStore *store = [CalCalendarStore defaultCalendarStore];
 	
 	//get all of the calendars
@@ -325,8 +332,6 @@
 		}	
 	}
 		
-	Broadcast *b = [filteredBroadcasts objectAtIndex:row];
-	
 	CalEvent *event = [CalEvent event];
 	event.calendar = cal;
 	event.title = b.station;

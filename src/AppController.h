@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 @class Broadcast;
+@class CalendarSheetController;
 
 @interface AppController : NSObject
 {
@@ -15,6 +16,8 @@
 
 	NSMutableArray *filteredBroadcasts;
 	NSMutableArray *broadcasts;
+	
+	CalendarSheetController *calendarSheet;
 
 	IBOutlet NSTextField *countLabel;
 	IBOutlet NSTextField *timerLabel;
