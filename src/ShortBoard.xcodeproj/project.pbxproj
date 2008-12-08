@@ -16,6 +16,8 @@
 		471EADFE0EE0AE2100A38C03 /* ArrayTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EADFD0EE0AE2100A38C03 /* ArrayTransformer.m */; };
 		471EAE480EE101B500A38C03 /* NSArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EAE470EE101B500A38C03 /* NSArrayFormatter.m */; };
 		477B09230EE44EB900783B86 /* NSTextField+TimeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 477B09220EE44EB900783B86 /* NSTextField+TimeCategory.m */; };
+		479D364B0EE9A11800A5568E /* CalendarSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479D364A0EE9A11800A5568E /* CalendarSheet.xib */; };
+		479D364F0EE9A5F100A5568E /* CalendarSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479D364E0EE9A5F100A5568E /* CalendarSheetController.m */; };
 		47C712E20EE5C19500EA4D7A /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 47C712E10EE5C19500EA4D7A /* Credits.html */; };
 		47C713240EE5D79300EA4D7A /* ShortBoard Help in Resources */ = {isa = PBXBuildFile; fileRef = 47C713200EE5D79300EA4D7A /* ShortBoard Help */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -47,6 +49,9 @@
 		471EAE470EE101B500A38C03 /* NSArrayFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayFormatter.m; sourceTree = "<group>"; };
 		477B09210EE44EB900783B86 /* NSTextField+TimeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextField+TimeCategory.h"; sourceTree = "<group>"; };
 		477B09220EE44EB900783B86 /* NSTextField+TimeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextField+TimeCategory.m"; sourceTree = "<group>"; };
+		479D364A0EE9A11800A5568E /* CalendarSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarSheet.xib; sourceTree = "<group>"; };
+		479D364D0EE9A5F100A5568E /* CalendarSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarSheetController.h; sourceTree = "<group>"; };
+		479D364E0EE9A5F100A5568E /* CalendarSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarSheetController.m; sourceTree = "<group>"; };
 		47C712E10EE5C19500EA4D7A /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		47C713200EE5D79300EA4D7A /* ShortBoard Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "ShortBoard Help"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +88,8 @@
 				477B09220EE44EB900783B86 /* NSTextField+TimeCategory.m */,
 				471307490EE78B0A003707F7 /* HoursMinutes.h */,
 				4713074A0EE78B0A003707F7 /* HoursMinutes.m */,
+				479D364D0EE9A5F100A5568E /* CalendarSheetController.h */,
+				479D364E0EE9A5F100A5568E /* CalendarSheetController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				47C712E10EE5C19500EA4D7A /* Credits.html */,
+				479D364A0EE9A11800A5568E /* CalendarSheet.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				47C712E20EE5C19500EA4D7A /* Credits.html in Resources */,
 				47C713240EE5D79300EA4D7A /* ShortBoard Help in Resources */,
+				479D364B0EE9A11800A5568E /* CalendarSheet.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +230,7 @@
 				471EAE480EE101B500A38C03 /* NSArrayFormatter.m in Sources */,
 				477B09230EE44EB900783B86 /* NSTextField+TimeCategory.m in Sources */,
 				4713074B0EE78B0A003707F7 /* HoursMinutes.m in Sources */,
+				479D364F0EE9A5F100A5568E /* CalendarSheetController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
