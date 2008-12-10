@@ -11,8 +11,6 @@
 #import "NSStringTSVCategory.h"
 #import "NSArrayFormatter.h"
 #import "NSTextField+TimeCategory.h"
-#import <CalendarStore/CalendarStore.h>
-#import "HoursMinutes.h"
 #import "CalendarSheetController.h"
 
 
@@ -279,8 +277,6 @@
 
 /************** calendar actions ******************/
 
-
-# define DEFAULT_CALENDAR_NAME @"ShortBoard"
 -(IBAction)handleAddCalendar:(id)sender
 {
 	NSLog(@"handleAddCalendar");
@@ -296,105 +292,7 @@
 	
 	
 	Broadcast *b = [filteredBroadcasts objectAtIndex:row];
-	[calendarSheet showSheet:mainWindow forBroadcast:b];
-	
-	CalCalendarStore *store = [CalCalendarStore defaultCalendarStore];
-	
-	//get all of the calendars
-	NSArray *calendars = [store calendars];
-	
-	CalCalendar *cal = nil;
-
-	//check and see if the calendar already exists
-	for(CalCalendar *c in calendars)
-	{
-		if([[c title] compare:DEFAULT_CALENDAR_NAME] == NSOrderedSame)
-		{
-			cal = c;
-			break;
-		}
-	}
-	
-	if(cal == nil)
-	{
-		//create the new calendar
-		cal = [CalCalendar calendar];
-		cal.title = DEFAULT_CALENDAR_NAME;
-		
-		NSError *cError;
-		[store saveCalendar:cal error:&cError];
-		
-		if (cError == FALSE)
-		{
-			NSAlert *alertPanel = [NSAlert alertWithError:cError];
-			[alertPanel runModal];
-			return;
-		}	
-	}
-		
-	CalEvent *event = [CalEvent event];
-	event.calendar = cal;
-	event.title = b.station;
-	
-	HoursMinutes *startTime = [[HoursMinutes alloc] initWithString:b.startTime];
-	HoursMinutes *endTime = [[HoursMinutes alloc] initWithString:b.endTime];
-	//release theses
-	
-	NSDate *date = [NSDate date];
-	
-	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-	
-	[dateFormatter setDateFormat:@"yyyy"];
-	NSString *year = [dateFormatter stringFromDate:date];
-
-	[dateFormatter setDateFormat:@"MM"];
-	NSString *month = [dateFormatter stringFromDate:date];	
-	
-	[dateFormatter setDateFormat:@"dd"];
-	NSString *day = [dateFormatter stringFromDate:date];
-	
-	NSString *start = [NSString stringWithFormat:@"%@-%@-%@ %@:%@:00 +0000", 
-										year, month, day, startTime.hours, startTime.minutes];
-	
-	NSString *end = [NSString stringWithFormat:@"%@-%@-%@ %@:%@:00 +0000", 
-					   year, month, day, endTime.hours, endTime.minutes];
-	
-	
-	NSDate *startDate = [NSDate dateWithString:start];
-	NSDate *endDate = [NSDate dateWithString:end];
-	
-	//check and see if the start time has alread passed for today.
-	//if it has, then add a day to the start date.
-	if([startDate compare:date] == NSOrderedAscending)
-	{
-		//1 day in seconds
-		NSTimeInterval oneDay = 86400;
-		
-		//is this a leak?
-		startDate = [startDate addTimeInterval:oneDay];
-		endDate = [endDate addTimeInterval:oneDay];
-	}
-	
-	
-	//YYYY-MM-DD HH:MM:SS ±HHMM
-	event.startDate = startDate;
-	event.endDate = endDate;
-	
-	event.notes = [NSString stringWithFormat:@"%@ - %@\n%@\n%@", 
-							b.station, b.country, [b.frequencies componentsJoinedByString:@", "],
-							b.notes];
-	
-	// Save changes to an event
-	NSError *calError;
-	[store saveEvent:event span:CalSpanThisEvent error:&calError];
-	
-	if (calError == NO)
-	{
-		NSAlert *alertPanel = [NSAlert alertWithError:calError];
-		[alertPanel runModal];
-		return;
-	}	
+	[calendarSheet showSheet:mainWindow forBroadcast:b];	
 }
 
 /**************** search actions ******************/
