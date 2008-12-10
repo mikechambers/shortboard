@@ -18,6 +18,4 @@
 @property(readwrite, copy) NSString *hours;
 @property(readwrite, copy) NSString *minutes;
 
-
-
 @end

@@ -1,0 +1,16 @@
+4bc7dfa1155efdb55a58c191837150e7 17bf3892b8e90e5fadb64792f51b741c ffffffffffffffffffffffffffffffff 16764 /Users/mesh/src/shortboard/src/build/ShortBoard.build/Debug/ShortBoard.build/Objects-normal/i386/NSTextField+TimeCategory.o
+4bc7dfa1155efdb55a58c19183715155 6b3874a1d648c190f9ea78c51eebecc3 ffffffffffffffffffffffffffffffff 7160 /Users/mesh/src/shortboard/src/build/ShortBoard.build/Debug/ShortBoard.build/Objects-normal/i386/NSArrayFormatter.o
+4bc7dfa1155efdb55a58c191837150d9 4ef8015e2ca000d7a3f4523fe06365a7 ffffffffffffffffffffffffffffffff 8048 /Users/mesh/src/shortboard/src/build/ShortBoard.build/Debug/ShortBoard.build/Objects-normal/i386/ArrayTransformer.o
+4bc7dfa113531c1c5a58c19183713484 1a2b2bf19c27ac05fa8670b5d72cbbfa ffffffffffffffffffffffffffffffff 12088 /Users/mesh/src/shortboard/src/build/ShortBoard.build/Debug/ShortBoard.build/Objects-normal/i386/NSStringTSVCategory.o
+4bc7dfa1155efdb55a58c191837154b6 cc8f59e7093f726bafba0ad69b19c41b ffffffffffffffffffffffffffffffff 17188 /Users/mesh/src/shortboard/src/build/ShortBoard.build/Debug/ShortBoard.build/Objects-normal/i386/Broadcast.o
+4bc7dfa1155efdb55a58c1918371721b 606279c983230e053395d6bdd82104a0 ffffffffffffffffffffffffffffffff 59404 /Users/mesh/src/shortboard/src/build/ShortBoard.build/Debug/ShortBoard.build/Objects-normal/i386/AppController.o
+4bc7dfa15c68cd5a5a58c19183715338 ad9da6470a1b74c417093e47b3998e84 ffffffffffffffffffffffffffffffff 4816 /Users/mesh/src/shortboard/src/build/ShortBoard.build/Debug/ShortBoard.build/Objects-normal/i386/main.o
+2977218e89c11d05e53ab8a8e449488d 975d83c72cbc7c018afeb6fdd20ea847 ffffffffffffffffffffffffffffffff 102 /Users/mesh/src/shortboard/src/build/Debug/ShortBoard.app
+62e33f540a4b4797dc503e60af6e1d69 00b581b6753e082248755dc5bc1469c8 ffffffffffffffffffffffffffffffff 38260 /Users/mesh/src/shortboard/src/build/Debug/ShortBoard.app/Contents/MacOS/ShortBoard
+00000000060de1a9000000000000625a 4bc7dfa15c68cd5a5a58c191837152ad ffffffffffffffffffffffffffffffff 34640660 /var/folders/QJ/QJwC6E8BGvqkshHXKFpw3E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ShortBoard_Prefix-hjowrkxlwkilftdidpgbzdterqag/ShortBoard_Prefix.pch.gch
+00000000000000000000000000000000 e7378620db0bf377a13c884d5a9851d3 ffffffffffffffffffffffffffffffff 238 /Users/mesh/src/shortboard/src/build/Debug/ShortBoard.app/Contents/Resources/ShortBoard Help
+00000000000000000000000000000000 8438ddf0c333ed2a6670c7174fb43457 ffffffffffffffffffffffffffffffff 528 /Users/mesh/src/shortboard/src/build/Debug/ShortBoard.app/Contents/Resources/Credits.html
+0000000049363703000000000001f1c5 ef3d9bfbbb5e182b37f4040e489775df ffffffffffffffffffffffffffffffff 32610 /Users/mesh/src/shortboard/src/build/Debug/ShortBoard.app/Contents/Resources/English.lproj/MainMenu.nib
+00000000493630ef000000000000005c c7135f4755d2532a81a79059aa89ddee ffffffffffffffffffffffffffffffff 92 /Users/mesh/src/shortboard/src/build/Debug/ShortBoard.app/Contents/Resources/English.lproj/InfoPlist.strings
+00000000000000000000000000000000 a6c66d13b3e8a0744568a0ff64f0ce18 ffffffffffffffffffffffffffffffff 8 /Users/mesh/src/shortboard/src/build/Debug/ShortBoard.app/Contents/PkgInfo
+00000000000000000000000000000000 a6c66d13b3e8a0744568a0ff64f0ce18 ffffffffffffffffffffffffffffffff 915 /Users/mesh/src/shortboard/src/build/Debug/ShortBoard.app/Contents/Info.plist

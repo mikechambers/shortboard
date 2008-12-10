@@ -22,7 +22,9 @@
 	IBOutlet NSTextField *titleField;
 	IBOutlet NSTextField *noteField;
 	
-	//Broadcast *broadcast;
+	IBOutlet NSButton *launchICalCheckBox;
+	
+	Broadcast *broadcast;
 }
 
 - (void)showSheet: (NSWindow *)window forBroadcast:(Broadcast *)broadcast;
@@ -30,5 +32,9 @@
 
 -(IBAction) handleCancelButton:(id)sender;
 -(IBAction) handleCreateAlertCheck:(id)sender;
+-(IBAction) handleAlertSoundClick:(id)sender;
+-(IBAction) handleCreateICalEntryClick:(id)sender;
+
+-(void) closeSheet;
 
 @end
