@@ -8,4 +8,5 @@ build/*
 
 # osx noise
 .DS_Store
+*.pbxuser
 profile
