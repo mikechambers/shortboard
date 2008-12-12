@@ -268,8 +268,13 @@
 	{
 		iCalApplication *ical= [SBApplication applicationWithBundleIdentifier:@"com.apple.iCal"];
 		[ical activate];
-		[ical viewCalendarAt:event.startDate];	
+		[ical viewCalendarAt:event.startDate];
+		[ical release];
 	}
+	
+	[dateFormatter release];
+	[startTime release];
+	[endTime release];
 }
 
 -(void) closeSheet
