@@ -29,6 +29,7 @@
 
 - (void)showSheet: (NSWindow *)window forBroadcast:(Broadcast *)broadcast;
 -(void)populateCalendarPopup;
+-(NSInteger)getStateForDefault:(NSString *)defaultName;
 
 -(IBAction) handleCancelButton:(id)sender;
 -(IBAction) handleCreateAlertCheck:(id)sender;
