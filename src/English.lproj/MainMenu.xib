@@ -8,9 +8,8 @@
 		<string key="IBDocument.HIToolboxVersion">352.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="57"/>
 			<integer value="504"/>
-			<integer value="372"/>
-			<integer value="620"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -412,7 +411,7 @@
 								<object class="NSMenuItem" id="678420633">
 									<reference key="NSMenu" ref="54422060"/>
 									<bool key="NSIsDisabled">YES</bool>
-									<string key="NSTitle">Add to Broadcast iCal...</string>
+									<string key="NSTitle">Add Broadcast to iCal...</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
@@ -883,7 +882,7 @@ ELIAAAAAAAgACAAIAAgAAQABAAEAAQ</bytes>
 				<string key="NSWindowContentMaxSize">{3.40282e+38, 3.40282e+38}</string>
 				<string key="NSWindowContentMinSize">{500, 300}</string>
 				<object class="NSView" key="NSWindowView" id="439893737">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1145,7 +1144,6 @@ ELIAAAAAAAgACAAIAAgAAQABAAEAAQ</bytes>
 									</object>
 									<string key="NSFrame">{{1, 17}, {812, 482}}</string>
 									<reference key="NSSuperview" ref="630462904"/>
-									<reference key="NSNextKeyView" ref="901654299"/>
 									<reference key="NSDocView" ref="901654299"/>
 									<reference key="NSBGColor" ref="980331917"/>
 									<int key="NScvFlags">4</int>
@@ -1179,7 +1177,6 @@ ELIAAAAAAAgACAAIAAgAAQABAAEAAQ</bytes>
 									</object>
 									<string key="NSFrame">{{1, 0}, {812, 17}}</string>
 									<reference key="NSSuperview" ref="630462904"/>
-									<reference key="NSNextKeyView" ref="528196430"/>
 									<reference key="NSDocView" ref="528196430"/>
 									<reference key="NSBGColor" ref="980331917"/>
 									<int key="NScvFlags">4</int>
@@ -1188,7 +1185,6 @@ ELIAAAAAAAgACAAIAAgAAQABAAEAAQ</bytes>
 							</object>
 							<string key="NSFrame">{{-1, 32}, {814, 500}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSNextKeyView" ref="647338784"/>
 							<int key="NSsFlags">562</int>
 							<reference key="NSVScroller" ref="105016837"/>
 							<reference key="NSHScroller" ref="932820454"/>
@@ -1220,7 +1216,7 @@ ELIAAAAAAAgACAAIAAgAAQABAAEAAQ</bytes>
 						<object class="NSButton" id="306895476">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">292</int>
-							<string key="NSFrame">{{20, 3}, {25, 25}}</string>
+							<string key="NSFrame">{{8, 5}, {25, 25}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="393075112">
@@ -1243,7 +1239,6 @@ ELIAAAAAAAgACAAIAAgAAQABAAEAAQ</bytes>
 						</object>
 					</object>
 					<string key="NSFrameSize">{812, 531}</string>
-					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
 				<string key="NSMinSize">{500, 360}</string>
@@ -2745,7 +2740,7 @@ ELIAAAAAAAgACAAIAAgAAQABAAEAAQ</bytes>
 					<string>com.apple.InterfaceBuilderKit</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
-					<string>{{834, 898}, {184, 23}}</string>
+					<string>{{622, 775}, {184, 23}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
 					<string>{{596, 852}, {216, 23}}</string>
@@ -2832,8 +2827,8 @@ ELIAAAAAAAgACAAIAAgAAQABAAEAAQ</bytes>
 					<string>{{6, 978}, {478, 20}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
-					<string>{{576, 287}, {812, 531}}</string>
-					<string>{{576, 287}, {812, 531}}</string>
+					<string>{{462, 369}, {812, 531}}</string>
+					<string>{{462, 369}, {812, 531}}</string>
 					<reference ref="9"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<boolean value="YES"/>
@@ -2889,7 +2884,7 @@ ELIAAAAAAAgACAAIAAgAAQABAAEAAQ</bytes>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{579, 683}, {214, 153}}</string>
+					<string>{{275, 645}, {214, 153}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
 					<string>{{23, 794}, {245, 183}}</string>
