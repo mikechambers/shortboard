@@ -6,7 +6,7 @@
 //  Copyright 2008 Mike Chambers. All rights reserved.
 //
 
-#import "NSStringTSVCategory.h"
+#import "NSString+TSVCategory.h"
 #import "Broadcast.h"
 
 #define START_INDEX 0
