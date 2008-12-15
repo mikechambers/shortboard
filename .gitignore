@@ -1,7 +1,8 @@
 #### `.gitignore`
 # xcode noise
-build/*
+src/build/*
 *.mode1v3
+
 
 # SVN directories
 .svn
