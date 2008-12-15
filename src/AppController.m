@@ -8,7 +8,7 @@
 
 #import "AppController.h"
 #import "Broadcast.h"
-#import "NSStringTSVCategory.h"
+#import "NSString+TSVCategory.h"
 #import "NSArrayFormatter.h"
 #import "NSTextField+TimeCategory.h"
 #import "CalendarSheetController.h"

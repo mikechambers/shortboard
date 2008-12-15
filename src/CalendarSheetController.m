@@ -38,13 +38,16 @@
 		return nil;
 	}
 	
-
-	//todo : should I store this in a class / instance variable?
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	
 	NSArray *keys = [NSArray arrayWithObjects:DefaultCreateAlert, 
-													DefaultAlertSound, DefaultLaunchIcal, nil];
-	NSArray *objects = [NSArray arrayWithObjects:@"FALSE", NO_SOUND , @"TRUE", nil];
+													DefaultAlertSound, 
+													DefaultLaunchIcal, nil];
+	
+	NSArray *objects = [NSArray arrayWithObjects:@"FALSE", 
+													NO_SOUND , 
+													@"TRUE", nil];
+	
 	NSDictionary *appDefaults = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
 								 	
     [defaults registerDefaults:appDefaults];	
@@ -57,8 +60,9 @@
 	[super dealloc];
 }
 
+/************** general methods ****************/
 
-//add category to popup to populate from array and key
+
 -(void)populateSoundPopup
 {
 	NSArray *sounds = [NSSound availableSounds];
@@ -66,8 +70,10 @@
 	[alertSoundsPopup populateAndResetFromArray:sounds];
 	[alertSoundsPopup insertItemWithTitle:NO_SOUND atIndex:0];
 	
-	//todo : what if the default titled doesnt exists anymore? should we check first?
 	NSString *defaultTitle = [[NSUserDefaults standardUserDefaults] stringForKey:DefaultAlertSound];
+	
+	//if for some reason the default sound no longer exists (deleted by user), then this will unselect
+	//the current seletected item.
 	[alertSoundsPopup selectItemWithTitle:defaultTitle];
 	
 	[alertSoundsPopup setEnabled:([alertCheckBox state] == NSOnState)];	
@@ -87,10 +93,14 @@
 	
 	if(defaultTitle != nil)
 	{
+		//if for some reason the default calendar no longer exists (deleted by user), then this will unselect
+		//the current seletected item.		
 		[calendarListPopup selectItemWithTitle:defaultTitle];
 	}
 }
 
+//returns an NSOnState or NSOffState depending on a bool value stored in NSUserDefaults
+//todo : should this be a category on NSUserDefaults?
 -(NSInteger)getStateForDefault:(NSString *)defaultName
 {
 	NSInteger state ;
@@ -106,9 +116,11 @@
 	return state;
 }
 
+//initializes and displays sheet for specified Broadcast
 - (void)showSheet: (NSWindow *)window forBroadcast:(Broadcast *)b
 {
-	//todo: do we need to retain broadcast / b
+	//todo: do we need to relese broadcast here? I dont think so since it is release
+	//when the sheet closes.
 	broadcast = b;
 	[broadcast retain];
 	
@@ -118,6 +130,7 @@
 	}
 	
 	//initialize control values
+	//order is important here
 	[alertCheckBox setState:[self getStateForDefault:DefaultCreateAlert]];
 	[launchICalCheckBox setState:[self getStateForDefault:DefaultLaunchIcal]];		
 	[self populateCalendarPopup];
@@ -143,6 +156,7 @@
     [sheet orderOut:self];
 }
 
+//adds an entry to iCal based on the information in the sheet
 -(void) addICalEntry
 {
 	CalCalendarStore *store = [CalCalendarStore defaultCalendarStore];
@@ -154,7 +168,6 @@
 	
 	NSString *calName = [calendarListPopup titleOfSelectedItem];
 	
-	//check and see if the calendar already exists
 	for(CalCalendar *c in calendars)
 	{
 		if([[c title] compare:calName] == NSOrderedSame)
@@ -163,6 +176,9 @@
 			break;
 		}
 	}
+	
+	//todo : it is possible the calendar doesnt exist. If the user opens sheet, selected
+	//calendar, switches to iCal, deletes calendar, and then submits sheet.
 	
 	/*
 	//this shouldnt be called 
@@ -192,7 +208,6 @@
 	
 	HoursMinutes *startTime = [[HoursMinutes alloc] initWithString:broadcast.startTime];
 	HoursMinutes *endTime = [[HoursMinutes alloc] initWithString:broadcast.endTime];
-	//release theses
 	
 	NSDate *date = [NSDate date];
 	
@@ -225,7 +240,7 @@
 		//1 day in seconds
 		NSTimeInterval oneDay = 86400;
 		
-		//is this a leak?
+		//todo: is this a leak? I dont think so since they are autoreleased
 		startDate = [startDate addTimeInterval:oneDay];
 		endDate = [endDate addTimeInterval:oneDay];
 	}
@@ -278,15 +293,7 @@
 }
 
 -(void) closeSheet
-{
-
-/*
- #define DefaultCreateAlert @"DefaultCreateAlert"
- #define DefaultAlertSound @"DefaultAlertSound"
- #define DefaultLaunchIcal @"DefaultLaunchIcal"
- #define DefaultCalendarName @"DefaultCalendarName"
-*/
-		
+{		
 	[broadcast release];
 	[NSApp endSheet:sheet];
 }
@@ -298,13 +305,13 @@
 	[self addICalEntry];
 	
 	[[NSUserDefaults standardUserDefaults]
-	 setBool:([alertCheckBox state] == NSOnState) forKey:DefaultCreateAlert];
+			setBool:([alertCheckBox state] == NSOnState) forKey:DefaultCreateAlert];
 	[[NSUserDefaults standardUserDefaults]
-	 setObject:[alertSoundsPopup titleOfSelectedItem] forKey:DefaultAlertSound];	
+			setObject:[alertSoundsPopup titleOfSelectedItem] forKey:DefaultAlertSound];	
 	[[NSUserDefaults standardUserDefaults]
-	 setBool:([launchICalCheckBox state] == NSOnState) forKey:DefaultLaunchIcal];	
+			setBool:([launchICalCheckBox state] == NSOnState) forKey:DefaultLaunchIcal];	
 	[[NSUserDefaults standardUserDefaults]
-	 setObject:[calendarListPopup titleOfSelectedItem] forKey:DefaultCalendarName];		
+			setObject:[calendarListPopup titleOfSelectedItem] forKey:DefaultCalendarName];		
 	
 	[self closeSheet];
 }

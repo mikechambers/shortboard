@@ -12,7 +12,7 @@
 		4713074B0EE78B0A003707F7 /* HoursMinutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4713074A0EE78B0A003707F7 /* HoursMinutes.m */; };
 		471EAA460EDE706200A38C03 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EAA450EDE706200A38C03 /* AppController.m */; };
 		471EAA4D0EDE719F00A38C03 /* Broadcast.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EAA4C0EDE719F00A38C03 /* Broadcast.m */; };
-		471EAC3C0EDF2C8A00A38C03 /* NSStringTSVCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EAC3B0EDF2C8A00A38C03 /* NSStringTSVCategory.m */; };
+		471EAC3C0EDF2C8A00A38C03 /* NSString+TSVCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EAC3B0EDF2C8A00A38C03 /* NSString+TSVCategory.m */; };
 		471EADFE0EE0AE2100A38C03 /* ArrayTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EADFD0EE0AE2100A38C03 /* ArrayTransformer.m */; };
 		471EAE480EE101B500A38C03 /* NSArrayFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EAE470EE101B500A38C03 /* NSArrayFormatter.m */; };
 		477B09230EE44EB900783B86 /* NSTextField+TimeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 477B09220EE44EB900783B86 /* NSTextField+TimeCategory.m */; };
@@ -44,8 +44,8 @@
 		471EAA450EDE706200A38C03 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		471EAA4B0EDE719F00A38C03 /* Broadcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Broadcast.h; sourceTree = "<group>"; };
 		471EAA4C0EDE719F00A38C03 /* Broadcast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Broadcast.m; sourceTree = "<group>"; };
-		471EAC3A0EDF2C8A00A38C03 /* NSStringTSVCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringTSVCategory.h; sourceTree = "<group>"; };
-		471EAC3B0EDF2C8A00A38C03 /* NSStringTSVCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringTSVCategory.m; sourceTree = "<group>"; };
+		471EAC3A0EDF2C8A00A38C03 /* NSString+TSVCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TSVCategory.h"; sourceTree = "<group>"; };
+		471EAC3B0EDF2C8A00A38C03 /* NSString+TSVCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TSVCategory.m"; sourceTree = "<group>"; };
 		471EADFC0EE0AE2100A38C03 /* ArrayTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayTransformer.h; sourceTree = "<group>"; };
 		471EADFD0EE0AE2100A38C03 /* ArrayTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayTransformer.m; sourceTree = "<group>"; };
 		471EAE460EE101B500A38C03 /* NSArrayFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayFormatter.h; sourceTree = "<group>"; };
@@ -91,8 +91,8 @@
 				471EAA450EDE706200A38C03 /* AppController.m */,
 				471EAA4B0EDE719F00A38C03 /* Broadcast.h */,
 				471EAA4C0EDE719F00A38C03 /* Broadcast.m */,
-				471EAC3A0EDF2C8A00A38C03 /* NSStringTSVCategory.h */,
-				471EAC3B0EDF2C8A00A38C03 /* NSStringTSVCategory.m */,
+				471EAC3A0EDF2C8A00A38C03 /* NSString+TSVCategory.h */,
+				471EAC3B0EDF2C8A00A38C03 /* NSString+TSVCategory.m */,
 				471EADFC0EE0AE2100A38C03 /* ArrayTransformer.h */,
 				471EADFD0EE0AE2100A38C03 /* ArrayTransformer.m */,
 				471EAE460EE101B500A38C03 /* NSArrayFormatter.h */,
@@ -241,7 +241,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				471EAA460EDE706200A38C03 /* AppController.m in Sources */,
 				471EAA4D0EDE719F00A38C03 /* Broadcast.m in Sources */,
-				471EAC3C0EDF2C8A00A38C03 /* NSStringTSVCategory.m in Sources */,
+				471EAC3C0EDF2C8A00A38C03 /* NSString+TSVCategory.m in Sources */,
 				471EADFE0EE0AE2100A38C03 /* ArrayTransformer.m in Sources */,
 				471EAE480EE101B500A38C03 /* NSArrayFormatter.m in Sources */,
 				477B09230EE44EB900783B86 /* NSTextField+TimeCategory.m in Sources */,
