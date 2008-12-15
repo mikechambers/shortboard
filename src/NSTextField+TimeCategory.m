@@ -3,7 +3,7 @@
 //  ShortBoard
 //
 //  Created by Mike Chambers on 12/1/08.
-//  Copyright 2008 __MyCompanyName__. All rights reserved.
+//  Copyright 2008 Mike Chambers. All rights reserved.
 //
 
 #import "NSTextField+TimeCategory.h"
