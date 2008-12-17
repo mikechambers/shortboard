@@ -97,6 +97,11 @@
 		//the current seletected item.		
 		[calendarListPopup selectItemWithTitle:defaultTitle];
 	}
+	
+	if([calendarListPopup selectedItem] == nil)
+	{
+		[calendarListPopup selectItemAtIndex:0];
+	}
 }
 
 //returns an NSOnState or NSOffState depending on a bool value stored in NSUserDefaults
