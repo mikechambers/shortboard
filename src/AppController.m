@@ -95,7 +95,6 @@
 
 -(void)refreshData
 {
-	NSLog(@"refreshData");
 	[broadcastTable reloadData];
 	[countLabel setStringValue:[NSString stringWithFormat:@"%i of %i broadcasts", [filteredBroadcasts count], [broadcasts count]]];
 }
@@ -120,11 +119,28 @@
 
 -(void)importFromFilePath:(NSString *)filePath
 {	
+	NSError *error = nil;
 	NSStringEncoding enc;
+	
+	
+	
 	NSString *data = [NSString stringWithContentsOfFile:filePath
 										   usedEncoding:&enc 
-												  error:NULL];
+												  error:&error];
 
+	if(!data)
+	{
+		error = nil;
+		data = [NSString stringWithContentsOfFile:filePath
+										   encoding:NSMacOSRomanStringEncoding
+												  error:&error];	
+	}
+	
+	if(error)
+	{
+		NSLog(@"Error : %@", error);
+	}
+	
 	if(data == nil)
 	{
 		NSAlert *alert = [[NSAlert alloc] init];
@@ -254,6 +270,9 @@
 	
 	Boolean suc = [fMan removeItemAtPath:path error:NULL];
 
+	[self updateBroadcasts:[NSMutableArray arrayWithCapacity:0]];
+	[self refreshData];
+	
 	if(!suc)
 	{
 		NSLog(@"Could not delete cache.");
@@ -279,8 +298,6 @@
 
 -(IBAction)handleAddCalendar:(id)sender
 {
-	NSLog(@"handleAddCalendar");
-	
 	NSInteger row = [broadcastTable selectedRow];
 	
 	if(row == -1)
@@ -298,9 +315,7 @@
 /**************** search actions ******************/
 
 -(IBAction)handleNowSearch:(NSMenuItem *)nowMenuItem
-{
-	NSLog(@"handleNowSearch");
-	
+{	
 	NSInteger state;
 	
 	if([nowMenuItem state] == NSOffState)
@@ -324,8 +339,6 @@
 
 -(IBAction)handleSearchMenuItems:(NSMenuItem *)menuItem
 {
-	NSLog(@"handleSearchMenuItems");
-	
 	if([menuItem state] == NSOffState)
 	{
 		[menuItem setState:NSOnState];
@@ -390,7 +403,6 @@
 
 -(IBAction)handleSearch:(NSSearchField *)searchField
 {
-	NSLog(@"handleSearch");
 	NSString *searchString = [searchField stringValue];
 	
 	//todo : the array somestimes get copied when it doesnt need to be

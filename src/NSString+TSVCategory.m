@@ -39,7 +39,6 @@
 	
 	NSMutableArray *out = [NSMutableArray arrayWithCapacity:rowCount];
 	
-	
 	NSArray *column;
 	
 	NSArray *frequencies;
@@ -80,6 +79,7 @@
 	
 	//todo make sure autorelease is being used correctly here
 	[out autorelease];
+	
 	return out;
 }
 
